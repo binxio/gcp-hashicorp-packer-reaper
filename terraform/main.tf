@@ -57,8 +57,8 @@ resource "google_project_iam_member" "packer-reaper-compute-engine" {
 
 resource "google_cloud_scheduler_job" "packer-reaper" {
   name        = "packer-reaper"
-  description = "invoke every hour"
-  schedule    = "*/1 * * * *"
+  description = "invoke every ten minutes"
+  schedule    = "*/10 * * * *"
 
   http_target {
     http_method = "GET"
@@ -79,8 +79,9 @@ resource "google_service_account" "scheduler" {
 
 resource "google_cloud_run_service_iam_binding" "reaper-run-invoker" {
   role = "roles/run.invoker"
-  members = ["serviceAccount:${google_service_account.scheduler.email}",
-  "user:mark.van.holsteijn@gmail.com"]
+  members = [
+    "serviceAccount:${google_service_account.scheduler.email}",
+  ]
 
   service  = google_cloud_run_service.packer-reaper.name
   location = google_cloud_run_service.packer-reaper.location

@@ -51,6 +51,6 @@ cd terraform
 terraform init
 vi erterraform apply -var project=$PROJECT -auto-approve
 ```
-This will install the packer reaper in your GCP project and run every hour, and delete
-instances older than 24 hours. You can change the schedule and the action to meet your requirements.
+This will install the packer reaper in your GCP project and run every 10 minutes, and delete
+instances older than 2 hours. You can change the schedule and the action to meet your requirements.
 
