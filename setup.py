@@ -22,7 +22,7 @@ with open(path.join(this_directory, "README.md"), encoding="utf-8") as f:
 
 setup(
     name="gcp-hashicorp-packer-reaper",
-    version="0.1.4",
+    version="0.1.0",
     url="https://github.com/binxio/gcp-hashicorp-packer-reaper",
     license="BSD",
     author="Mark van Holsteijn",
