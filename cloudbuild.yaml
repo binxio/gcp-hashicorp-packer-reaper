@@ -2,7 +2,7 @@ steps:
   - name: gcr.io/cloud-builders/git
     args: ['init']
   - name: gcr.io/cloud-builders/git
-    args: ['remote', 'add', 'origin', 'https://github.com/binxio/image-reference-updater.git']
+    args: ['remote', 'add', 'origin', 'https://github.com/binxio/gcp-hashicorp-packer-reaper.git']
   - name: gcr.io/cloud-builders/git
     args: ['fetch']
   - name: gcr.io/cloud-builders/git
