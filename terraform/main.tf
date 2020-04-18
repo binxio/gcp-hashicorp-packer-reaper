@@ -28,7 +28,7 @@ resource "google_cloud_run_service" "packer-reaper" {
     spec {
       service_account_name = google_service_account.packer-reaper.email
       containers {
-        image = "gcr.io/${data.google_project.current.project_id}/gcp-hashicorp-packer-reaper:latest"
+        image = "gcr.io/${data.google_project.current.project_id}/gcp-hashicorp-packer-reaper:0.1.1"
       }
     }
   }
