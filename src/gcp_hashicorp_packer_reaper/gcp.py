@@ -48,7 +48,7 @@ class Instance(dict):
 
     @property
     def description(self):
-        return self["description"]
+        return self.get("description", "")
 
     @property
     def creation_time(self):
